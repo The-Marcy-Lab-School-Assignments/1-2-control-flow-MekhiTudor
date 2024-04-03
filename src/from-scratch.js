@@ -42,14 +42,14 @@ const funTypes = (jsType) => {
     console.log("Nothing, but I didn't set that.")
   } else if (jsType === null) {
     console.log("Nothing, and I did set that.")
-  } else if (typeof jsType === 'object' && typeof jsType === 'object' && jsType.isArray) {
-    console.log("Anybody got the key?")
   } else if (Array.isArray(jsType)) {
     console.log("I order you to be indexed.")
+  } else if (typeof jsType === 'object' && typeof jsType === 'object') {
+    console.log("Anybody got the key?")
   }
 }
 
-funTypes('')
+//funTypes([])
 
 const rounder = () => {
 };
