@@ -31,7 +31,7 @@ const happyBirthdayPet = (breed, age) => {
 };
 const funTypes = (jsType) => {
   if (typeof jsType === 'string') {
-    console.log('That\'s just some text')
+    console.log('That\'s just some text.')
   } else if (Number.isNaN(jsType)) {
     console.log("Well, now you're just showing off.")
   } else if (typeof jsType === 'number') {
@@ -49,6 +49,7 @@ const funTypes = (jsType) => {
   }
 }
 
+funTypes('')
 
 const rounder = () => {
 };
