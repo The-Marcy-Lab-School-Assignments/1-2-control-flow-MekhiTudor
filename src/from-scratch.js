@@ -51,12 +51,23 @@ const funTypes = (jsType) => {
 
 //funTypes([])
 
-const rounder = () => {
+const rounder = (float, roundSetting) => {
+  if (roundSetting === 'up') {
+    return Math.ceil(float)
+  } else if (roundSetting === 'down') {
+    return Math.floor(float)
+  } else if (roundSetting === 'honest') {
+    return Math.round(float)
+  }
 };
+console.log(rounder(1.6, 'honest'))
 
-const fizzBuzzish = () => {
+const fizzBuzzish = (num) => {
+  if (num % 3 === 0) {
+    return 'fizz'
+  }
 };
-
+fizzBuzzish(3)
 module.exports = {
   measureRain,
   happyBirthdayPet,
