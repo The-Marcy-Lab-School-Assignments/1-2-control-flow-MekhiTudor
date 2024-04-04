@@ -1,25 +1,28 @@
 const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error('min must be less than max');
-  return Math.floor(Math.random() * max);
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 };
 
 const coolnessGauge = (numOfFridges) => {
-  return numOfFridges > 5 ? 'You need more fridges.' : 'You are downright chilly!';
+  return numOfFridges < 4 ? 'You need more fridges.' : 'You are downright chilly!';
 };
 
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
     console.log('No pops? Maybe try one.');
-  } else if (numOfFunkoPops >= 1) {
+  } else if (numOfFunkoPops <= 10) {
     console.log('Only a few? Keep having fun!');
-  } else if (numOfFunkoPops > 10) {
+  } else if (numOfFunkoPops <= 20) {
     console.log('You have a problem.');
-  } else if (numOfFunkoPops > 20) {
+  } else if (numOfFunkoPops <= 30) {
     console.log('You need help!');
   } else {
     console.log('You need an intervention!!!');
   }
 };
+
 
 const getWeatherReport = (temperature) => {
   if (temperature > 90) {

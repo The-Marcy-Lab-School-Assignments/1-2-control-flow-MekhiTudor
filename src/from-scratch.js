@@ -60,14 +60,22 @@ const rounder = (float, roundSetting) => {
     return Math.round(float)
   }
 };
-console.log(rounder(1.6, 'honest'))
+//console.log(rounder(1.6, 'honest'))
 
 const fizzBuzzish = (num) => {
-  if (num % 3 === 0) {
-    return 'fizz'
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log('fizzBuzz!')
+  } else if (num % 5 === 0) {
+    console.log('buzz')
+  } else if (num % 3 === 0) {
+    console.log('fizz')
+  } else {
+    console.log(num)
   }
 };
-fizzBuzzish(3)
+fizzBuzzish(1);
+
+
 module.exports = {
   measureRain,
   happyBirthdayPet,
