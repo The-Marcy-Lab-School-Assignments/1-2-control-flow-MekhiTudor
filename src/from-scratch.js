@@ -44,6 +44,7 @@ const funTypes = (jsType) => {
     console.log("Nothing, and I did set that.")
   } else if (Array.isArray(jsType)) {
     console.log("I order you to be indexed.")
+    /** FEEDBACK: You wrote the same condition twice? */
   } else if (typeof jsType === 'object' && typeof jsType === 'object') {
     console.log("Anybody got the key?")
   }

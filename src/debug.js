@@ -4,7 +4,7 @@ const getRandomIntInRange = (min, max) => {
   const maxFloored = Math.floor(max);
   return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 };
-
+/** FEEDBACK: Great use of ternary! */
 const coolnessGauge = (numOfFridges) => {
   return numOfFridges < 4 ? 'You need more fridges.' : 'You are downright chilly!';
 };
@@ -45,7 +45,7 @@ const getWeatherReport = (temperature) => {
 };
 
 //getWeatherReport(100)
-
+/** FEEDBACK: Great job! */
 const returnPositiveNegativeZero = (num) => {
   if (num === 0) {
     return 'Zero'
